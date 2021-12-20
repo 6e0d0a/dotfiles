@@ -1,0 +1,25 @@
+#!/bin/sh
+
+alias vim="/usr/bin/nvim"
+alias vi="/usr/bin/nvim"
+
+alias ls="/usr/bin/ls_extended -h"
+alias la="ls -a"
+alias ll="ls -l"
+
+alias ip="ip --color=auto"
+
+alias optimus="/usr/bin/optimus-manager"
+os=$(cat /etc/os-release | grep -E "^NAME=" | awk '{print $2}' FS='=' | tr -d '"')
+
+case "$os" in
+	"Arch Linux")
+		neofetch --os_arch off --disable cpu gpu --memory_display bar
+		;;
+	"BlackArch Linux")
+		neofetch --colors 9 7 7 9 7 7 --ascii_colors 9 9 8 --bar_colors 7 9 --memory_display bar --ascii_distro blackarch --disable cpu gpu
+		;;
+	*)
+		neofetch
+		;;
+esac
