@@ -10,8 +10,8 @@ cd dotfiles
 chmod +x install.sh
 ./install.sh -h
 #Options:
-	-s -> Creates symbolic links instead of copying files
-	-r -> Remove old configuration if exists
+#	-s -> Creates symbolic links instead of copying files
+#	-r -> Remove old configuration if exists
 ```
 
 ## Configuration content
